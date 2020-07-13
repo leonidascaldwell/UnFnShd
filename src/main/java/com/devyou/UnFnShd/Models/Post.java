@@ -1,6 +1,7 @@
 package com.devyou.UnFnShd.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,8 @@ public class Post {
     private String author;
     private String content_url;
     private String description;
-    private String created_date;
+    //@CreationTimestamp
+    private String created_date = java.time.LocalDateTime.now().toString();
 
     public Post(){}
 
